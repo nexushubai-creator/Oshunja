@@ -737,6 +737,28 @@ footer {
   }
 }
 
+@keyframes fadeInLeft {
+  from {
+    opacity: 0.1;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 0.8;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0.1;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 0.8;
+    transform: translateX(0);
+  }
+}
+
 @keyframes pulse {
   0%, 100% {
     box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
@@ -744,6 +766,116 @@ footer {
   50% {
     box-shadow: 0 4px 25px rgba(37, 211, 102, 0.7);
   }
+}
+
+/* Alternating Image Layout */
+.procedures-showcase {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.procedure-showcase-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 80px;
+  opacity: 0;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.procedure-showcase-item:nth-child(odd) {
+  animation-name: fadeInLeft;
+}
+
+.procedure-showcase-item:nth-child(even) {
+  animation-name: fadeInRight;
+  grid-template-columns: 1fr 1fr;
+}
+
+.procedure-showcase-item:nth-child(even) .procedure-showcase-image {
+  order: 2;
+}
+
+.procedure-showcase-item:nth-child(even) .procedure-showcase-content {
+  order: 1;
+}
+
+.procedure-showcase-item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.procedure-showcase-item:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.procedure-showcase-item:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+.procedure-showcase-item:nth-child(4) {
+  animation-delay: 0.7s;
+}
+
+.procedure-showcase-item:nth-child(5) {
+  animation-delay: 0.9s;
+}
+
+.procedure-showcase-item:nth-child(6) {
+  animation-delay: 1.1s;
+}
+
+.procedure-showcase-item:nth-child(7) {
+  animation-delay: 1.3s;
+}
+
+.procedure-showcase-item:nth-child(8) {
+  animation-delay: 1.5s;
+}
+
+.procedure-showcase-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: var(--shadow-hover);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.procedure-showcase-image:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.procedure-showcase-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+.procedure-showcase-content {
+  padding: 20px;
+}
+
+.procedure-showcase-content h3 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: var(--text-dark);
+  font-weight: 700;
+}
+
+.procedure-showcase-content p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--text-light);
+  margin-bottom: 25px;
+}
+
+.procedure-showcase-content .btn {
+  display: inline-block;
 }
 
 /* Responsive Design */
@@ -817,6 +949,25 @@ footer {
     width: 50px;
     height: 50px;
     font-size: 28px;
+  }
+
+  .procedure-showcase-item {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+    margin-bottom: 50px;
+  }
+
+  .procedure-showcase-item:nth-child(even) .procedure-showcase-image,
+  .procedure-showcase-item:nth-child(even) .procedure-showcase-content {
+    order: unset !important;
+  }
+
+  .procedure-showcase-content h3 {
+    font-size: 24px;
+  }
+
+  .procedure-showcase-content p {
+    font-size: 16px;
   }
 }
 
