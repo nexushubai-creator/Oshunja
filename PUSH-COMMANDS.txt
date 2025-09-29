@@ -1,0 +1,14 @@
+# Copy and paste these commands after creating GitHub repo
+# Replace YOUR-USERNAME with your actual GitHub username!
+
+git remote add origin https://github.com/YOUR-USERNAME/oshunja-website.git
+git push -u origin main
+
+# You'll be asked for:
+# Username: your-github-username
+# Password: use Personal Access Token (not your actual password)
+
+# Get token here: https://github.com/settings/tokens
+# Click "Generate new token (classic)"
+# Check "repo" scope
+# Copy the token and paste it as password
