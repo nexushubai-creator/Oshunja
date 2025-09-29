@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Consultation - Contact OSHUNJA in Kingston, Jamaica</title>
+    <meta name="description" content="Schedule your private consultation at OSHUNJA in Kingston, Jamaica. Expert gynecology, aesthetics, and wellness services. Contact us today.">
+    <meta name="keywords" content="book consultation Kingston Jamaica, contact OSHUNJA, aesthetic clinic appointment Kingston, gynecology consultation Jamaica">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+            <nav>
+                <a href="../index.html" class="logo">OSHUN<span style="color: var(--secondary-color);">JA</span></a>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="facial-procedures.html">Facial Procedures</a></li>
+                    <li><a href="body-procedures.html">Body Procedures</a></li>
+                    <li><a href="pelvic-intimate.html">Pelvic & Intimate</a></li>
+                    <li><a href="pelvic-reproductive.html">Pelvic & Reproductive</a></li>
+                    <li><a href="wellness.html">Wellness</a></li>
+                    <li><a href="hair-procedures.html">Hair Procedures</a></li>
+                    <li><a href="contact.html" class="btn btn-primary active">Book Consultation</a></li>
+                </ul>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+            </nav>
+        </div>
+    </header>
+
+    <section class="category-hero" style="min-height: 300px; padding: 100px 0 60px;">
+        <div class="container">
+            <h1>Book Your Consultation</h1>
+            <p>Take the first step toward your aesthetic and wellness goals. Schedule a private consultation with our expert team in Kingston, Jamaica.</p>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <div style="max-width: 1000px; margin: 0 auto;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 60px;">
+                    <!-- Contact Form -->
+                    <div>
+                        <h2 style="font-size: 32px; margin-bottom: 20px; color: var(--text-dark);">Request a Consultation</h2>
+                        <p style="color: var(--text-light); margin-bottom: 30px; line-height: 1.8;">Fill out the form below and our team will contact you within 24 hours to schedule your appointment. All inquiries are kept strictly confidential.</p>
+
+                        <form id="contactForm" class="contact-form">
+                            <!-- Form Message (Success/Error) -->
+                            <div id="formMessage" class="form-message"></div>
+
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required aria-required="true">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required aria-required="true">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required aria-required="true" placeholder="+1 (876) XXX-XXXX">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="procedure">Procedure of Interest *</label>
+                                <select id="procedure" name="procedure" required aria-required="true">
+                                    <option value="">-- Select a Procedure --</option>
+                                    <optgroup label="Facial Procedures">
+                                        <option value="Botox">Botox</option>
+                                        <option value="Dermal Fillers">Dermal Fillers</option>
+                                        <option value="Chemical Peels">Chemical Peels</option>
+                                        <option value="Microneedling">Microneedling</option>
+                                        <option value="Laser Skin Resurfacing">Laser Skin Resurfacing</option>
+                                        <option value="Thread Lift">PDO Thread Lift</option>
+                                    </optgroup>
+                                    <optgroup label="Body Procedures">
+                                        <option value="CoolSculpting">CoolSculpting</option>
+                                        <option value="Liposuction">Liposuction</option>
+                                        <option value="Body Lift">Body Lift Surgery</option>
+                                        <option value="RF Skin Tightening">RF Skin Tightening</option>
+                                        <option value="Mommy Makeover">Mommy Makeover</option>
+                                        <option value="Brazilian Butt Lift">Brazilian Butt Lift</option>
+                                    </optgroup>
+                                    <optgroup label="Pelvic & Intimate">
+                                        <option value="Labiaplasty">Labiaplasty</option>
+                                        <option value="Vaginoplasty">Vaginal Rejuvenation</option>
+                                        <option value="Laser Vaginal Tightening">Laser Vaginal Tightening</option>
+                                        <option value="Clitoral Hood Reduction">Clitoral Hood Reduction</option>
+                                        <option value="Perineoplasty">Perineoplasty</option>
+                                        <option value="O-Shot">O-Shot</option>
+                                    </optgroup>
+                                    <optgroup label="Pelvic & Reproductive">
+                                        <option value="Myomectomy">Fibroid Treatment</option>
+                                        <option value="Endometriosis">Endometriosis Management</option>
+                                        <option value="Hysterectomy">Hysterectomy</option>
+                                        <option value="Fertility Evaluation">Fertility Evaluation</option>
+                                        <option value="Vasectomy">Vasectomy</option>
+                                    </optgroup>
+                                    <optgroup label="Wellness">
+                                        <option value="Hormone Therapy">Hormone Therapy</option>
+                                        <option value="IV Therapy">IV Nutrient Therapy</option>
+                                        <option value="Weight Management">Weight Management</option>
+                                        <option value="Semaglutide">Semaglutide/Ozempic</option>
+                                    </optgroup>
+                                    <optgroup label="Hair Procedures">
+                                        <option value="PRP Hair">PRP Hair Restoration</option>
+                                        <option value="Hair Transplant">Hair Transplant</option>
+                                        <option value="Medical Hair Treatment">Medical Hair Treatment</option>
+                                    </optgroup>
+                                    <option value="General Consultation">General Consultation</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="appointmentDate">Preferred Appointment Date</label>
+                                <input type="date" id="appointmentDate" name="appointmentDate" min="" aria-label="Preferred appointment date">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message / Additional Information</label>
+                                <textarea id="message" name="message" rows="5" placeholder="Tell us about your concerns, questions, or any specific information you'd like us to know..."></textarea>
+                            </div>
+
+                            <div class="form-group" style="margin-bottom: 10px;">
+                                <label style="display: flex; align-items: start; gap: 10px; font-weight: normal; cursor: pointer;">
+                                    <input type="checkbox" id="consent" name="consent" required style="margin-top: 4px; width: auto;" aria-required="true">
+                                    <span style="font-size: 14px; line-height: 1.6; color: var(--text-light);">
+                                        I consent to being contacted by OSHUNJA regarding my inquiry and understand that all information provided will be kept strictly confidential in accordance with our <a href="privacy-policy.html" style="color: var(--primary-color); text-decoration: underline;">Privacy Policy</a>. *
+                                    </span>
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 18px; padding: 18px;">
+                                Submit Consultation Request
+                            </button>
+
+                            <p style="font-size: 13px; color: var(--text-light); text-align: center; margin-top: 15px; line-height: 1.6;">
+                                * Required fields. We typically respond within 24 hours during business days.
+                            </p>
+                        </form>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div>
+                        <h2 style="font-size: 32px; margin-bottom: 20px; color: var(--text-dark);">Get In Touch</h2>
+                        <p style="color: var(--text-light); margin-bottom: 30px; line-height: 1.8;">Prefer to contact us directly? Reach out via phone, email, or WhatsApp. We're here to answer your questions.</p>
+
+                        <div style="background: var(--bg-white); padding: 30px; border-radius: 8px; box-shadow: var(--shadow); margin-bottom: 30px;">
+                            <h3 style="font-size: 20px; margin-bottom: 15px; color: var(--primary-color);">📍 Visit Us</h3>
+                            <p style="line-height: 1.8; color: var(--text-dark);">
+                                <strong>OSHUNJA</strong><br>
+                                Your Street Address<br>
+                                Kingston, Jamaica
+                            </p>
+                        </div>
+
+                        <div style="background: var(--bg-white); padding: 30px; border-radius: 8px; box-shadow: var(--shadow); margin-bottom: 30px;">
+                            <h3 style="font-size: 20px; margin-bottom: 15px; color: var(--primary-color);">📞 Call or Text</h3>
+                            <p style="line-height: 1.8; color: var(--text-dark);">
+                                <strong>Phone:</strong> <a href="tel:+1876XXXXXXX" style="color: var(--primary-color);">+1 (876) XXX-XXXX</a><br>
+                                <strong>WhatsApp:</strong> <a href="https://wa.me/1876XXXXXXX" style="color: #25D366;">Message Us</a>
+                            </p>
+                        </div>
+
+                        <div style="background: var(--bg-white); padding: 30px; border-radius: 8px; box-shadow: var(--shadow); margin-bottom: 30px;">
+                            <h3 style="font-size: 20px; margin-bottom: 15px; color: var(--primary-color);">✉️ Email</h3>
+                            <p style="line-height: 1.8; color: var(--text-dark);">
+                                <a href="mailto:info@oshunja.com" style="color: var(--primary-color);">info@oshunja.com</a>
+                            </p>
+                        </div>
+
+                        <div style="background: var(--bg-white); padding: 30px; border-radius: 8px; box-shadow: var(--shadow);">
+                            <h3 style="font-size: 20px; margin-bottom: 15px; color: var(--primary-color);">🕐 Hours</h3>
+                            <p style="line-height: 1.8; color: var(--text-dark);">
+                                <strong>Monday - Friday:</strong> 9:00 AM - 5:00 PM<br>
+                                <strong>Saturday:</strong> By Appointment Only<br>
+                                <strong>Sunday:</strong> Closed
+                            </p>
+                            <p style="margin-top: 15px; font-size: 14px; color: var(--text-light); font-style: italic;">
+                                After-hours consultations available upon request
+                            </p>
+                        </div>
+
+                        <div style="margin-top: 30px; text-align: center;">
+                            <p style="font-size: 16px; margin-bottom: 15px; color: var(--text-dark);"><strong>Follow Us</strong></p>
+                            <div style="display: flex; justify-content: center; gap: 15px;">
+                                <a href="https://instagram.com/oshunja" target="_blank" rel="noopener noreferrer" style="width: 50px; height: 50px; background: var(--primary-color); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; transition: var(--transition);" aria-label="Instagram">📷</a>
+                                <a href="https://wa.me/1876XXXXXXX" target="_blank" rel="noopener noreferrer" style="width: 50px; height: 50px; background: #25D366; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; transition: var(--transition);" aria-label="WhatsApp">💬</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Information -->
+                <div style="background: var(--bg-light); padding: 40px; border-radius: 8px; text-align: center;">
+                    <h3 style="font-size: 24px; margin-bottom: 15px; color: var(--text-dark);">What to Expect at Your Consultation</h3>
+                    <p style="color: var(--text-light); line-height: 1.8; max-width: 800px; margin: 0 auto;">
+                        Your initial consultation is a comprehensive, judgment-free discussion about your goals, concerns, and medical history. We'll perform any necessary examinations, explain treatment options in detail, discuss expected outcomes and recovery, answer all your questions, and provide transparent pricing. Consultations typically last 30-60 minutes and are conducted in complete privacy. There's no pressure—our goal is to educate and empower you to make the best decision for your health and wellness.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p><strong>Phone:</strong> <a href="tel:+1876XXXXXXX">+1 (876) XXX-XXXX</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:info@oshunja.com">info@oshunja.com</a></p>
+                    <p><strong>Address:</strong> Your Street Address<br>Kingston, Jamaica</p>
+                    <div class="social-icons">
+                        <a href="https://instagram.com/oshunja" target="_blank" class="social-icon">📷</a>
+                        <a href="https://wa.me/1876XXXXXXX" target="_blank" class="social-icon">💬</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Opening Hours</h3>
+                    <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
+                    <p>Saturday: By Appointment Only</p>
+                    <p>Sunday: Closed</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="facial-procedures.html">Facial Procedures</a>
+                    <a href="body-procedures.html">Body Procedures</a>
+                    <a href="pelvic-intimate.html">Pelvic & Intimate Care</a>
+                    <a href="wellness.html">Wellness Services</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-of-service.html">Terms of Service</a>
+                    <a href="consent-forms.html">Consent Forms</a>
+                    <p style="margin-top: 20px; font-size: 13px;">Results vary by individual. Consult our medical team.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 OSHUNJA. All rights reserved. | Kingston, Jamaica</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/1876XXXXXXX" class="whatsapp-float" target="_blank">💬</a>
+    <script src="../js/main.js"></script>
+</body>
+</html>

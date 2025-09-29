@@ -1,0 +1,19 @@
+HOW TO ADD IMAGES TO YOUR WEBSITE
+==================================
+
+LOCATION: Place images in this folder
+PATH: /home/jmatthewlee/claude-test/images/
+
+FROM WINDOWS:
+1. Open File Explorer
+2. Type in address bar: \\wsl$\Ubuntu\home\jmatthewlee\claude-test\images
+3. Drag and drop your images here!
+
+REQUIRED IMAGE FILES:
+- hero-bg.jpg (1920x1080) - Homepage background
+- category-bg.jpg (1920x600) - Category page backgrounds  
+- og-image.jpg (1200x630) - Social media preview
+
+AFTER ADDING:
+Refresh your browser at http://localhost:8000 to see the images!
+
