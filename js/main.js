@@ -13,6 +13,9 @@ document.addEventListener('DOMContentLoaded', function() {
     initFAQ();
     initSmoothScroll();
     initDatePicker();
+    initServiceCardAnimations();
+    initServiceCategoryAnimations();
+    initProcedureTooltips();
 });
 
 // ============================================
@@ -48,14 +51,30 @@ function initNavigation() {
             mobileMenuBtn.textContent = isActive ? '☰' : '✕';
         });
 
+        // Mobile dropdown toggle
+        const dropdowns = document.querySelectorAll('.dropdown');
+        dropdowns.forEach(dropdown => {
+            const navCategory = dropdown.querySelector('.nav-category');
+            if (navCategory) {
+                navCategory.addEventListener('click', function(e) {
+                    if (window.innerWidth <= 768) {
+                        e.stopPropagation();
+                        dropdown.classList.toggle('active');
+                    }
+                });
+            }
+        });
+
         // Close menu when clicking on a link
-        const navItems = navLinks.querySelectorAll('a');
+        const navItems = navLinks.querySelectorAll('.dropdown-menu a');
         navItems.forEach(item => {
             item.addEventListener('click', function() {
                 if (window.innerWidth <= 768) {
                     navLinks.classList.remove('active');
                     mobileMenuBtn.setAttribute('aria-expanded', 'false');
                     mobileMenuBtn.textContent = '☰';
+                    // Close all dropdowns
+                    dropdowns.forEach(d => d.classList.remove('active'));
                 }
             });
         });
@@ -69,6 +88,8 @@ function initNavigation() {
                 navLinks.classList.remove('active');
                 mobileMenuBtn.setAttribute('aria-expanded', 'false');
                 mobileMenuBtn.textContent = '☰';
+                // Close all dropdowns
+                dropdowns.forEach(d => d.classList.remove('active'));
             }
         });
     }
@@ -486,6 +507,206 @@ function isInViewport(element) {
         rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
+}
+
+// ============================================
+// SERVICE CARD SCROLL ANIMATIONS
+// ============================================
+
+function initServiceCardAnimations() {
+    const serviceCards = document.querySelectorAll('.service-card');
+
+    if (serviceCards.length === 0) return;
+
+    function animateServiceCards() {
+        serviceCards.forEach((card, index) => {
+            const icon = card.querySelector('.service-card-icon');
+            if (!icon) return;
+
+            const cardRect = card.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+
+            // Calculate progress: 0 when card bottom enters viewport, 1 when card top reaches top of viewport
+            const cardBottom = cardRect.bottom;
+            const cardTop = cardRect.top;
+
+            // Start animation when card enters viewport
+            // Complete animation when card top reaches viewport top
+            const animationStart = windowHeight;
+            const animationEnd = 0;
+            const animationRange = animationStart - animationEnd;
+
+            let progress = 0;
+
+            if (cardTop <= animationStart && cardBottom >= 0) {
+                // Card is in viewport
+                progress = Math.min(Math.max((animationStart - cardTop) / animationRange, 0), 1);
+            }
+
+            // Calculate opacity: 0% to 60%
+            const opacity = progress * 0.6;
+
+            // Calculate translateX: starts at -300px (odd) or 300px (even), moves toward center
+            const isOdd = (index + 1) % 2 === 1;
+            const startPosition = isOdd ? -300 : 300;
+            const endPosition = isOdd ? 150 : -150;
+            const translateX = startPosition + (endPosition - startPosition) * progress;
+
+            // Apply transforms
+            icon.style.opacity = opacity;
+            icon.style.transform = `translateX(${translateX}px)`;
+        });
+    }
+
+    // Initial animation check
+    animateServiceCards();
+
+    // Throttled scroll handler
+    let ticking = false;
+    window.addEventListener('scroll', function() {
+        if (!ticking) {
+            window.requestAnimationFrame(function() {
+                animateServiceCards();
+                ticking = false;
+            });
+            ticking = true;
+        }
+    });
+}
+
+// ============================================
+// SERVICE CATEGORY CARD ANIMATIONS
+// ============================================
+
+function initServiceCategoryAnimations() {
+    const categoryCards = document.querySelectorAll('.service-category-card[data-animate]');
+
+    if (categoryCards.length === 0) return;
+
+    function animateCategoryCards() {
+        categoryCards.forEach((card) => {
+            const image = card.querySelector('.service-category-image img');
+            if (!image) return;
+
+            const cardRect = card.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+
+            // Calculate progress based on scroll position
+            // Start when card enters viewport, complete when card is centered
+            const animationStart = windowHeight;
+            const animationEnd = windowHeight / 2 - cardRect.height / 2;
+            const animationRange = animationStart - animationEnd;
+
+            let progress = 0;
+
+            if (cardRect.top <= animationStart && cardRect.bottom >= 0) {
+                // Card is in viewport
+                progress = Math.min(Math.max((animationStart - cardRect.top) / animationRange, 0), 1);
+            } else if (cardRect.top < animationEnd) {
+                // Card has scrolled past center
+                progress = 1;
+            }
+
+            // Fade in the card itself
+            card.style.opacity = Math.min(progress * 2, 1);
+
+            // Determine animation direction based on data-animate attribute
+            const animateDirection = card.getAttribute('data-animate');
+            const isLeft = animateDirection === 'fade-left';
+
+            // Calculate image position and opacity
+            // Start from edge of viewport, move to center
+            const startPosition = isLeft ? -100 : 100; // vw units
+            const endPosition = 0;
+            const translateX = startPosition + (endPosition - startPosition) * progress;
+
+            // Opacity: 5% to 60%
+            const opacity = 0.05 + (0.55 * progress);
+
+            // Apply transforms
+            image.style.transform = `translateX(${translateX}vw)`;
+            image.style.opacity = opacity;
+        });
+    }
+
+    // Initial animation check
+    animateCategoryCards();
+
+    // Throttled scroll handler
+    let ticking = false;
+    window.addEventListener('scroll', function() {
+        if (!ticking) {
+            window.requestAnimationFrame(function() {
+                animateCategoryCards();
+                ticking = false;
+            });
+            ticking = true;
+        }
+    });
+}
+
+// ============================================
+// PROCEDURE TOOLTIPS
+// ============================================
+
+function initProcedureTooltips() {
+    const procedureButtons = document.querySelectorAll('.procedure-btn[data-description]');
+
+    if (procedureButtons.length === 0) return;
+
+    // Create tooltip element
+    const tooltip = document.createElement('div');
+    tooltip.className = 'procedure-tooltip';
+    document.body.appendChild(tooltip);
+
+    procedureButtons.forEach(button => {
+        button.addEventListener('mouseenter', function(e) {
+            const description = this.getAttribute('data-description');
+            if (!description) return;
+
+            // Set tooltip content
+            tooltip.textContent = description;
+            tooltip.classList.add('show');
+
+            // Position tooltip
+            positionTooltip(e, this, tooltip);
+        });
+
+        button.addEventListener('mousemove', function(e) {
+            positionTooltip(e, this, tooltip);
+        });
+
+        button.addEventListener('mouseleave', function() {
+            tooltip.classList.remove('show');
+        });
+    });
+
+    function positionTooltip(event, button, tooltip) {
+        const buttonRect = button.getBoundingClientRect();
+        const tooltipRect = tooltip.getBoundingClientRect();
+
+        // Position below the button
+        let top = buttonRect.bottom + 10;
+        let left = buttonRect.left + (buttonRect.width / 2) - (tooltipRect.width / 2);
+
+        // Keep tooltip within viewport
+        if (left < 10) left = 10;
+        if (left + tooltipRect.width > window.innerWidth - 10) {
+            left = window.innerWidth - tooltipRect.width - 10;
+        }
+
+        // If tooltip goes off bottom of screen, show it above the button
+        if (top + tooltipRect.height > window.innerHeight - 10) {
+            top = buttonRect.top - tooltipRect.height - 10;
+            // Adjust arrow position for top placement
+            tooltip.style.setProperty('--arrow-position', 'bottom');
+        } else {
+            tooltip.style.setProperty('--arrow-position', 'top');
+        }
+
+        tooltip.style.top = top + 'px';
+        tooltip.style.left = left + 'px';
+    }
 }
 
 // ============================================

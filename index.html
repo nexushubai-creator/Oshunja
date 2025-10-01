@@ -20,6 +20,11 @@
     <meta name="twitter:description" content="Advanced gynecology, aesthetics & wellness in Kingston, Jamaica">
     <meta name="twitter:image" content="https://oshunja.com/images/og-image.jpg">
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Crimson+Pro:wght@300;400;500;600&display=swap" rel="stylesheet">
+
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
@@ -61,13 +66,78 @@
                 <a href="index.html" class="logo" aria-label="OSHUNJA Home">OSHUN<span style="color: var(--secondary-color);">JA</span></a>
                 <ul class="nav-links" id="navLinks">
                     <li><a href="index.html" class="active" aria-label="Home">Home</a></li>
-                    <li><a href="pages/facial-procedures.html" aria-label="Facial Procedures">Facial Procedures</a></li>
-                    <li><a href="pages/body-procedures.html" aria-label="Body Procedures">Body Procedures</a></li>
-                    <li><a href="pages/pelvic-intimate.html" aria-label="Pelvic & Intimate Procedures">Pelvic & Intimate</a></li>
-                    <li><a href="pages/pelvic-reproductive.html" aria-label="Pelvic & Reproductive Procedures">Pelvic & Reproductive</a></li>
-                    <li><a href="pages/reproductive-health.html" aria-label="Reproductive Health Services">Reproductive Health</a></li>
-                    <li><a href="pages/wellness.html" aria-label="Whole-Body Wellness">Wellness</a></li>
-                    <li><a href="pages/hair-procedures.html" aria-label="Hair Procedures">Hair Procedures</a></li>
+
+                    <li class="dropdown">
+                        <span class="nav-category">Gynecology</span>
+                        <ul class="dropdown-menu">
+                            <li><a href="pages/procedures/pelvic-intimate/labiaplasty.html">Labiaplasty</a></li>
+                            <li><a href="pages/procedures/pelvic-intimate/clitoral-hood-reduction.html">Clitoral Hood Reduction</a></li>
+                            <li><a href="pages/procedures/pelvic-intimate/perineoplasty.html">Perineoplasty</a></li>
+                            <li><a href="pages/procedures/pelvic-intimate/hymenoplasty.html">Hymenoplasty</a></li>
+                            <li><a href="pages/procedures/pelvic-intimate/vaginoplasty.html">Vaginoplasty</a></li>
+                            <li><a href="pages/procedures/pelvic-intimate/anal-skin-removal.html">Anal Skin Removal</a></li>
+                            <li><a href="pages/procedures/pelvic-intimate/labial-puff.html">Labial Puff</a></li>
+                            <li><a href="pages/procedures/pelvic-reproductive/annual-exam.html">Annual Exam</a></li>
+                            <li><a href="pages/procedures/pelvic-reproductive/endometrial-ablation.html">Endometrial Ablation</a></li>
+                            <li><a href="pages/procedures/pelvic-reproductive/hysteroscopy.html">Hysteroscopy</a></li>
+                            <li><a href="pages/procedures/pelvic-reproductive/laparoscopy.html">Laparoscopy</a></li>
+                            <li><a href="pages/procedures/pelvic-reproductive/myomectomy.html">Myomectomy</a></li>
+                            <li><a href="pages/procedures/pelvic-reproductive/hysterectomy.html">Hysterectomy</a></li>
+                            <li><a href="pages/procedures/pelvic-reproductive/thinprep-pap.html">ThinPrep Pap</a></li>
+                            <li><a href="pages/procedures/pelvic-reproductive/colposcopy.html">Colposcopy</a></li>
+                            <li><a href="pages/procedures/pelvic-intimate/vulvar-vaginal-cysts-warts.html">Vulvar/Vaginal Cysts & Warts</a></li>
+                            <li><a href="pages/procedures/pelvic-intimate/lichen-sclerosus-treatment.html">Lichen Sclerosus Treatment</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <span class="nav-category">Aesthetics</span>
+                        <ul class="dropdown-menu">
+                            <li><a href="pages/procedures/facial/botox.html">Botox</a></li>
+                            <li><a href="pages/procedures/facial/juvederm.html">Juvederm</a></li>
+                            <li><a href="pages/procedures/facial/prp-facial.html">PRP Facial</a></li>
+                            <li><a href="pages/procedures/facial/microneedling.html">Microneedling</a></li>
+                            <li><a href="pages/procedures/hair/laser-hair-removal.html">Laser Hair Removal</a></li>
+                            <li><a href="pages/procedures/body/prp-breast-lift.html">PRP Breast Lift</a></li>
+                            <li><a href="pages/procedures/body/liposuction-360-180.html">Liposuction 360/180</a></li>
+                            <li><a href="pages/procedures/body/renuvion-abdomen.html">Renuvion - Abdomen</a></li>
+                            <li><a href="pages/procedures/body/renuvion-back.html">Renuvion - Back</a></li>
+                            <li><a href="pages/procedures/body/renuvion-neck.html">Renuvion - Neck</a></li>
+                            <li><a href="pages/procedures/body/renuvion-arms.html">Renuvion - Arms</a></li>
+                            <li><a href="pages/procedures/hair/prp-hair-restoration.html">Hair Restoration</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <span class="nav-category">Wellness</span>
+                        <ul class="dropdown-menu">
+                            <li><a href="pages/procedures/wellness/ozempic.html">Ozempic</a></li>
+                            <li><a href="pages/procedures/wellness/mounjaro.html">Mounjaro</a></li>
+                            <li><a href="pages/procedures/wellness/dietetics.html">Dietetics</a></li>
+                            <li><a href="pages/procedures/wellness/metabolic-health-testing.html">Metabolic Health Testing</a></li>
+                            <li><a href="pages/procedures/wellness/iv-therapy.html">IV Therapy</a></li>
+                            <li><a href="pages/procedures/wellness/wellness-coaching.html">Wellness Coaching</a></li>
+                            <li><a href="pages/procedures/wellness/sauna.html">Sauna</a></li>
+                            <li><a href="pages/procedures/wellness/cold-plunge.html">Cold Plunge</a></li>
+                            <li><a href="pages/procedures/wellness/salt-blocks.html">Salt Blocks</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <span class="nav-category">Sexual Health</span>
+                        <ul class="dropdown-menu">
+                            <li><a href="pages/procedures/sexual-health/o-shot.html">O-Shot</a></li>
+                            <li><a href="pages/procedures/sexual-health/clit-shot.html">Clit Shot</a></li>
+                            <li><a href="pages/procedures/sexual-health/p-shot.html">P-Shot</a></li>
+                            <li><a href="pages/procedures/sexual-health/shockwave-therapy.html">Shockwave Therapy</a></li>
+                            <li><a href="pages/procedures/sexual-health/bioidentical-hormones-women.html">Bioidentical Hormones (Women)</a></li>
+                            <li><a href="pages/procedures/sexual-health/bioidentical-hormones-men.html">Bioidentical Hormones (Men)</a></li>
+                            <li><a href="pages/procedures/sexual-health/menopause-management.html">Menopause Management</a></li>
+                            <li><a href="pages/procedures/sexual-health/testosterone-optimization.html">Testosterone Optimization</a></li>
+                            <li><a href="pages/procedures/sexual-health/emsella-chair.html">Emsella Chair</a></li>
+                        </ul>
+                    </li>
+
                     <li><a href="pages/contact.html" class="btn btn-primary" aria-label="Book Consultation">Book Consultation</a></li>
                 </ul>
                 <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle mobile menu" aria-expanded="false">
@@ -89,51 +159,172 @@
         </div>
     </section>
 
-    <!-- Service Cards Section -->
+    <!-- Service Cards Section with Procedures -->
     <section class="section">
         <div class="container">
-            <h2 class="section-title">Our Services</h2>
-            <p class="section-subtitle">Comprehensive aesthetic and wellness treatments tailored to your unique needs in the heart of Kingston, Jamaica</p>
-
-            <div class="service-cards">
-                <!-- Facial Procedures Card -->
-                <article class="service-card" onclick="location.href='pages/facial-procedures.html'" role="button" tabindex="0" aria-label="View Facial Procedures">
-                    <div class="service-card-icon" aria-hidden="true">✨</div>
-                    <h3>Facial Procedures</h3>
-                    <p>Rejuvenate and enhance your natural beauty with advanced facial aesthetics including Botox, dermal fillers, chemical peels, and innovative treatments.</p>
-                    <a href="pages/facial-procedures.html" class="btn btn-primary">Explore Facial Treatments</a>
+            <div class="service-cards-with-procedures">
+                <!-- Facial Procedures -->
+                <article class="service-category-card" data-animate="fade-left">
+                    <div class="service-category-image" data-animate="fade-up">
+                        <img src="images/Face np bg.png" alt="Facial Procedures">
+                    </div>
+                    <div class="service-category-content">
+                        <h3>Facial Procedures</h3>
+                        <p class="category-description">Physician-led facial aesthetics in Kingston. From injectables to PRP treatments, achieve natural-looking results with our specialists.</p>
+                        <div class="procedure-buttons">
+                            <a href="pages/procedures/facial/botox.html" class="btn procedure-btn" data-description="Reduces wrinkles and fine lines by relaxing facial muscles.">Botox</a>
+                            <a href="pages/procedures/facial/juvederm.html" class="btn procedure-btn" data-description="Dermal filler for volume and smoothing wrinkles.">Juvederm</a>
+                            <a href="pages/procedures/facial/prp-facial.html" class="btn procedure-btn" data-description="Platelet-rich plasma facial rejuvenation treatment.">PRP Facial</a>
+                            <a href="pages/procedures/facial/microneedling.html" class="btn procedure-btn" data-description="Stimulates collagen production to improve skin texture.">Microneedling</a>
+                        </div>
+                    </div>
                 </article>
 
-                <!-- Body Procedures Card -->
-                <article class="service-card" onclick="location.href='pages/body-procedures.html'" role="button" tabindex="0" aria-label="View Body Procedures">
-                    <div class="service-card-icon" aria-hidden="true">💪</div>
-                    <h3>Body Procedures</h3>
-                    <p>Sculpt and contour your body with non-invasive and minimally invasive procedures including CoolSculpting, body contouring, and skin tightening.</p>
-                    <a href="pages/body-procedures.html" class="btn btn-primary">Discover Body Treatments</a>
+                <!-- Hair & Scalp Procedures -->
+                <article class="service-category-card" data-animate="fade-right">
+                    <div class="service-category-image" data-animate="fade-up">
+                        <img src="images/Hair Procedures.png" alt="Hair & Scalp Procedures">
+                    </div>
+                    <div class="service-category-content">
+                        <h3>Hair & Scalp Procedures</h3>
+                        <p class="category-description">Advanced hair restoration and hair removal treatments in Kingston. Achieve your desired hair goals with our specialized procedures.</p>
+                        <div class="procedure-buttons">
+                            <a href="pages/procedures/hair/laser-hair-removal.html" class="btn procedure-btn" data-description="Permanent hair reduction using laser technology.">Laser Hair Removal</a>
+                            <a href="pages/procedures/hair/prp-hair-restoration.html" class="btn procedure-btn" data-description="Hair restoration using platelet-rich plasma therapy.">Hair Restoration (PRP)</a>
+                        </div>
+                    </div>
                 </article>
 
-                <!-- Pelvic & Intimate Card -->
-                <article class="service-card" onclick="location.href='pages/pelvic-intimate.html'" role="button" tabindex="0" aria-label="View Pelvic & Intimate Procedures">
-                    <div class="service-card-icon" aria-hidden="true">🌸</div>
-                    <h3>Pelvic & Intimate Procedures</h3>
-                    <p>Specialized cosmetic gynecology including labiaplasty, vaginal rejuvenation, and intimate wellness treatments for enhanced comfort and confidence.</p>
-                    <a href="pages/pelvic-intimate.html" class="btn btn-primary">View Intimate Care</a>
+                <!-- Body Procedures -->
+                <article class="service-category-card" data-animate="fade-left">
+                    <div class="service-category-image" data-animate="fade-up">
+                        <img src="images/Body Procedures.png" alt="Body Procedures">
+                    </div>
+                    <div class="service-category-content">
+                        <h3>Body Procedures</h3>
+                        <p class="category-description">Advanced body contouring and sculpting in Kingston. Transform your body with our expert surgical and non-surgical treatments.</p>
+                        <div class="procedure-buttons">
+                            <a href="pages/procedures/body/prp-breast-lift.html" class="btn procedure-btn" data-description="Non-surgical breast lift using platelet-rich plasma.">PRP Breast Lift</a>
+                            <a href="pages/procedures/body/liposuction-360-180.html" class="btn procedure-btn" data-description="360 or 180 degree body contouring through liposuction.">Liposuction 360/180</a>
+                            <a href="pages/procedures/body/renuvion-abdomen.html" class="btn procedure-btn" data-description="Skin tightening treatment for abdomen using Renuvion technology.">Renuvion - Abdomen</a>
+                            <a href="pages/procedures/body/renuvion-back.html" class="btn procedure-btn" data-description="Skin tightening treatment for back.">Renuvion - Back</a>
+                            <a href="pages/procedures/body/renuvion-neck.html" class="btn procedure-btn" data-description="Skin tightening treatment for neck and jawline.">Renuvion - Neck</a>
+                            <a href="pages/procedures/body/renuvion-arms.html" class="btn procedure-btn" data-description="Skin tightening treatment for arms.">Renuvion - Arms</a>
+                        </div>
+                    </div>
                 </article>
 
-                <!-- Reproductive Health Card -->
-                <article class="service-card" onclick="location.href='pages/reproductive-health.html'" role="button" tabindex="0" aria-label="View Reproductive Health Services">
-                    <div class="service-card-icon" aria-hidden="true">🩺</div>
-                    <h3>Reproductive Health Services</h3>
-                    <p>Comprehensive family planning, fertility care, STI testing, prenatal support, and women's reproductive health services in a confidential, caring environment.</p>
-                    <a href="pages/reproductive-health.html" class="btn btn-primary">View Health Services</a>
+                <!-- Pelvic & Intimate -->
+                <article class="service-category-card" data-animate="fade-right">
+                    <div class="service-category-image" data-animate="fade-up">
+                        <img src="images/Pelvic and Intimate Wellness.png" alt="Pelvic & Intimate">
+                    </div>
+                    <div class="service-category-content">
+                        <h3>Pelvic & Intimate</h3>
+                        <p class="category-description">Confidential cosmetic gynecology services in Kingston. Fellowship-trained gynecologic surgeons provide labiaplasty, vaginal rejuvenation, and intimate wellness treatments in a private, judgment-free environment.</p>
+                        <div class="procedure-buttons">
+                            <a href="pages/procedures/pelvic-intimate/labiaplasty.html" class="btn procedure-btn" data-description="Reduces enlarged or asymmetric labia for comfort during exercise, intimacy, and daily activities.">Labiaplasty</a>
+                            <a href="pages/procedures/pelvic-intimate/clitoral-hood-reduction.html" class="btn procedure-btn" data-description="Reduces excess tissue around the clitoris for aesthetic balance and improved sensitivity.">Clitoral Hood Reduction</a>
+                            <a href="pages/procedures/pelvic-intimate/perineoplasty.html" class="btn procedure-btn" data-description="Repairs and strengthens perineal tissues after childbirth trauma or tearing.">Perineoplasty</a>
+                            <a href="pages/procedures/pelvic-intimate/hymenoplasty.html" class="btn procedure-btn" data-description="Hymen reconstruction for cultural, personal, or medical reasons.">Hymenoplasty</a>
+                            <a href="pages/procedures/pelvic-intimate/vaginoplasty.html" class="btn procedure-btn" data-description="Tightens vaginal muscles after childbirth or aging. Improves sensation and confidence.">Vaginoplasty</a>
+                            <a href="pages/procedures/pelvic-intimate/anal-skin-removal.html" class="btn procedure-btn" data-description="Removes excess skin around the anal area for comfort and aesthetics.">Anal Skin Removal</a>
+                            <a href="pages/procedures/pelvic-intimate/labial-puff.html" class="btn procedure-btn" data-description="Restores volume to deflated labia majora using your own fat for a youthful appearance.">Labial Puff</a>
+                        </div>
+                    </div>
                 </article>
 
-                <!-- Whole-Body Wellness Card -->
-                <article class="service-card" onclick="location.href='pages/wellness.html'" role="button" tabindex="0" aria-label="View Wellness Services">
-                    <div class="service-card-icon" aria-hidden="true">🧘</div>
-                    <h3>Whole-Body Wellness</h3>
-                    <p>Comprehensive wellness programs including hormone optimization, IV therapy, nutritional guidance, and integrative health solutions.</p>
-                    <a href="pages/wellness.html" class="btn btn-primary">Explore Wellness</a>
+                <!-- Pelvic & Reproductive -->
+                <article class="service-category-card" data-animate="fade-left">
+                    <div class="service-category-image" data-animate="fade-up">
+                        <img src="images/Reproductive Health Procedures.png" alt="Pelvic & Reproductive">
+                    </div>
+                    <div class="service-category-content">
+                        <h3>Pelvic & Reproductive</h3>
+                        <p class="category-description">Comprehensive women's health and gynecological surgery in Kingston, Jamaica. Expert treatment for fibroids, cysts, and reproductive health concerns with minimally invasive laparoscopic procedures.</p>
+                        <div class="procedure-buttons">
+                            <a href="pages/procedures/pelvic-reproductive/annual-exam.html" class="btn procedure-btn" data-description="Comprehensive annual gynecology and breast examination.">Annual Exam & Breast Exam</a>
+                            <a href="pages/procedures/pelvic-reproductive/endometrial-ablation.html" class="btn procedure-btn" data-description="Treatment for heavy menstrual bleeding by removing uterine lining.">Endometrial Ablation</a>
+                            <a href="pages/procedures/pelvic-reproductive/hysteroscopy.html" class="btn procedure-btn" data-description="Minimally invasive procedure to examine and treat uterine conditions.">Hysteroscopy</a>
+                            <a href="pages/procedures/pelvic-reproductive/laparoscopy.html" class="btn procedure-btn" data-description="Minimally invasive surgery for diagnosis and treatment of pelvic conditions.">Laparoscopy</a>
+                            <a href="pages/procedures/pelvic-reproductive/myomectomy.html" class="btn procedure-btn" data-description="Removes uterine fibroids while preserving fertility. Open, Laparoscopic, or Hysteroscopic.">Myomectomy</a>
+                            <a href="pages/procedures/pelvic-reproductive/hysterectomy.html" class="btn procedure-btn" data-description="Surgical removal of the uterus. Vaginal, Laparoscopic, or Abdominal approach.">Hysterectomy</a>
+                            <a href="pages/procedures/pelvic-reproductive/thinprep-pap.html" class="btn procedure-btn" data-description="Advanced cervical cancer screening test.">ThinPrep Pap Test</a>
+                            <a href="pages/procedures/pelvic-reproductive/colposcopy.html" class="btn procedure-btn" data-description="Detailed examination of the cervix for abnormal cells.">Colposcopy</a>
+                            <a href="pages/procedures/pelvic-intimate/vulvar-vaginal-cysts-warts.html" class="btn procedure-btn" data-description="Treatment for vulvar and vaginal cysts and warts.">Vulvar/Vaginal Cysts & Warts</a>
+                            <a href="pages/procedures/pelvic-intimate/lichen-sclerosus-treatment.html" class="btn procedure-btn" data-description="Treatment for lichen sclerosus skin condition.">Lichen Sclerosus Treatment</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Wellness -->
+                <article class="service-category-card" data-animate="fade-right">
+                    <div class="service-category-image" data-animate="fade-up">
+                        <img src="images/Wellness Procedures.png" alt="Wellness & Weight Loss">
+                    </div>
+                    <div class="service-category-content">
+                        <h3>Wellness</h3>
+                        <p class="category-description">Integrative wellness and medical weight management in Kingston. Achieve optimal health with physician-supervised weight loss programs, metabolic testing, and wellness coaching.</p>
+                        <div class="procedure-buttons">
+                            <a href="pages/procedures/wellness/ozempic.html" class="btn procedure-btn" data-description="Prescription weight loss medication for sustained results.">Ozempic</a>
+                            <a href="pages/procedures/wellness/mounjaro.html" class="btn procedure-btn" data-description="Advanced weight loss injection therapy.">Mounjaro</a>
+                            <a href="pages/procedures/wellness/dietetics.html" class="btn procedure-btn" data-description="Professional dietary counseling and meal planning.">Dietetics</a>
+                            <a href="pages/procedures/wellness/metabolic-health-testing.html" class="btn procedure-btn" data-description="Comprehensive metabolic testing and analysis.">Metabolic Health Testing</a>
+                            <a href="pages/procedures/wellness/iv-therapy.html" class="btn procedure-btn" data-description="Vitamin and nutrient infusions for energy and health.">IV Therapy</a>
+                            <a href="pages/procedures/wellness/wellness-coaching.html" class="btn procedure-btn" data-description="Personalized wellness and lifestyle coaching.">Wellness Coaching</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Sexual Health - Women -->
+                <article class="service-category-card" data-animate="fade-right">
+                    <div class="service-category-image" data-animate="fade-up">
+                        <img src="images/Pelvic and Intimate Wellness.png" alt="Women's Sexual Health">
+                    </div>
+                    <div class="service-category-content">
+                        <h3>Sexual Health - Women</h3>
+                        <p class="category-description">Specialized treatments to enhance sexual wellness, address hormonal imbalances, and improve intimate health for women.</p>
+                        <div class="procedure-buttons">
+                            <a href="pages/procedures/sexual-health/o-shot.html" class="btn procedure-btn" data-description="PRP injection to enhance sexual arousal and sensitivity.">O-Shot</a>
+                            <a href="pages/procedures/sexual-health/clit-shot.html" class="btn procedure-btn" data-description="PRP treatment focused on clitoral sensitivity enhancement.">Clit Shot</a>
+                            <a href="pages/procedures/sexual-health/bioidentical-hormones-women.html" class="btn procedure-btn" data-description="Natural hormone replacement for women's hormonal balance.">Bioidentical Hormones</a>
+                            <a href="pages/procedures/sexual-health/menopause-management.html" class="btn procedure-btn" data-description="Comprehensive menopause symptom management.">Menopause Management</a>
+                            <a href="pages/procedures/sexual-health/emsella-chair.html" class="btn procedure-btn" data-description="Non-invasive treatment for pelvic floor strengthening and incontinence.">Emsella Chair</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Sexual Health - Men -->
+                <article class="service-category-card" data-animate="fade-left">
+                    <div class="service-category-image" data-animate="fade-up">
+                        <img src="images/Body Procedures.png" alt="Men's Sexual Health">
+                    </div>
+                    <div class="service-category-content">
+                        <h3>Sexual Health - Men</h3>
+                        <p class="category-description">Advanced treatments for men's sexual wellness, including ED treatment, hormone optimization, and performance enhancement.</p>
+                        <div class="procedure-buttons">
+                            <a href="pages/procedures/sexual-health/p-shot.html" class="btn procedure-btn" data-description="PRP injection for erectile function and sensitivity enhancement.">P-Shot</a>
+                            <a href="pages/procedures/sexual-health/shockwave-therapy.html" class="btn procedure-btn" data-description="Non-invasive ED treatment using acoustic wave therapy.">Shockwave Therapy</a>
+                            <a href="pages/procedures/sexual-health/bioidentical-hormones-men.html" class="btn procedure-btn" data-description="Natural hormone replacement for men's hormonal balance.">Bioidentical Hormones</a>
+                            <a href="pages/procedures/sexual-health/testosterone-optimization.html" class="btn procedure-btn" data-description="Medical testosterone replacement and optimization therapy.">Testosterone Optimization</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Wellness Therapies -->
+                <article class="service-category-card" data-animate="fade-left">
+                    <div class="service-category-image" data-animate="fade-up">
+                        <img src="images/Wellness Procedures.png" alt="Overall Wellness">
+                    </div>
+                    <div class="service-category-content">
+                        <h3>Wellness Therapies</h3>
+                        <p class="category-description">Holistic wellness treatments including heat and cold therapy for detoxification, recovery, and overall health optimization.</p>
+                        <div class="procedure-buttons">
+                            <a href="pages/procedures/wellness/sauna.html" class="btn procedure-btn" data-description="Infrared sauna therapy for detoxification and relaxation.">Sauna</a>
+                            <a href="pages/procedures/wellness/cold-plunge.html" class="btn procedure-btn" data-description="Cold water immersion therapy for recovery and vitality.">Cold Plunge</a>
+                            <a href="pages/procedures/wellness/salt-blocks.html" class="btn procedure-btn" data-description="Himalayan salt therapy for respiratory and skin health.">Salt Blocks</a>
+                        </div>
+                    </div>
                 </article>
             </div>
         </div>
