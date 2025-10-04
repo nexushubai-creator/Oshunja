@@ -47,35 +47,50 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  background: var(--bg-white);
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(10px);
   z-index: 1000;
   transition: var(--transition);
-  border-bottom: 1px solid transparent;
+  border-bottom: 1px solid rgba(196, 154, 108, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
 }
 
 header.scrolled {
-  box-shadow: var(--shadow);
-  border-bottom-color: var(--border-color);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+  border-bottom-color: rgba(196, 154, 108, 0.2);
 }
 
 nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 20px 0;
+  padding: 22px 30px;
+  max-width: 100%;
+  margin: 0 auto;
+  gap: 40px;
 }
 
 .logo {
   font-family: var(--font-heading);
-  font-size: 32px;
+  font-size: 30px;
   font-weight: 600;
   color: var(--primary-color);
-  letter-spacing: 3px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  flex-shrink: 0;
 }
 
 .nav-links {
   display: flex;
-  gap: 30px;
+  gap: 25px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.nav-links > li {
+  position: relative;
+  display: flex;
   align-items: center;
 }
 
@@ -83,10 +98,11 @@ nav {
   color: var(--text-dark);
   font-family: var(--font-body);
   font-weight: 500;
-  font-size: 15px;
-  letter-spacing: 0.3px;
+  font-size: 14px;
+  letter-spacing: 0.4px;
   transition: var(--transition);
   position: relative;
+  white-space: nowrap;
 }
 
 .nav-links a::after {
@@ -118,12 +134,14 @@ nav {
   color: var(--text-dark);
   font-family: var(--font-body);
   font-weight: 500;
-  font-size: 15px;
-  letter-spacing: 0.3px;
+  font-size: 14px;
+  letter-spacing: 0.4px;
   cursor: pointer;
   position: relative;
   display: inline-block;
   transition: var(--transition);
+  white-space: nowrap;
+  padding: 5px 0;
 }
 
 .nav-category::after {
@@ -150,7 +168,8 @@ nav {
   position: absolute;
   top: 100%;
   left: 0;
-  background: var(--bg-white);
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(15px);
   min-width: 280px;
   box-shadow: var(--shadow-hover);
   border-radius: 8px;
@@ -158,7 +177,7 @@ nav {
   margin-top: 0;
   padding-top: 20px;
   z-index: 1000;
-  border: 1px solid var(--border-color);
+  border: 1px solid rgba(196, 154, 108, 0.2);
 }
 
 .dropdown:hover .dropdown-menu {
@@ -211,7 +230,7 @@ nav {
   height: 100vh;
   min-height: 600px;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url('../images/hero-bg.jpg') center/cover no-repeat;
+    url('../images/Hero banner image.jpeg') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -252,15 +271,26 @@ nav {
 
 /* Buttons */
 .btn {
-  padding: 16px 32px;
-  border-radius: 4px;
+  padding: 14px 28px;
+  border-radius: 6px;
   font-family: var(--font-body);
   font-weight: 600;
   font-size: 16px;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.6px;
   transition: var(--transition);
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+/* Add visual separation before action buttons in nav */
+.nav-links > li:nth-last-child(3) {
+  margin-left: 12px;
+  padding-left: 12px;
+  border-left: 1px solid rgba(196, 154, 108, 0.2);
 }
 
 .btn-primary {
@@ -285,9 +315,65 @@ nav {
   color: var(--primary-color);
 }
 
+/* Virtual Consultation Button - Luxurious Style */
+#virtualConsultBtn,
+.btn-virtual-consult {
+  background: linear-gradient(135deg, #8B4049 0%, #A85860 100%) !important;
+  color: white !important;
+  border: 2px solid #8B4049 !important;
+  font-weight: 600 !important;
+  box-shadow: 0 2px 12px rgba(139, 64, 73, 0.4);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+#virtualConsultBtn::before,
+.btn-virtual-consult::before {
+  content: '✨ ';
+  font-size: 14px;
+  margin-right: 6px;
+  opacity: 0.9;
+}
+
+#virtualConsultBtn:hover,
+.btn-virtual-consult:hover {
+  background: linear-gradient(135deg, #6E2F36 0%, #8B4049 100%) !important;
+  color: var(--bg-white) !important;
+  border-color: #6E2F36 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 20px rgba(139, 64, 73, 0.5) !important;
+}
+
+#virtualConsultBtn::after,
+.btn-virtual-consult::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+#virtualConsultBtn:hover::after,
+.btn-virtual-consult:hover::after {
+  width: 300px;
+  height: 300px;
+}
+
 /* Service Cards Section */
 .section {
   padding: 80px 0;
+}
+
+.hero + .section {
+  padding-top: 0;
 }
 
 .section-title {
@@ -581,12 +667,52 @@ footer {
   transform: translateY(-3px);
 }
 
+.footer-map .map-container {
+  margin-top: 10px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.footer-map iframe {
+  display: block;
+  width: 100%;
+}
+
 .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 20px;
   text-align: center;
   color: rgba(255, 255, 255, 0.6);
   font-size: 14px;
+}
+
+/* AI Chat Floating Button */
+.chat-float {
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  background: linear-gradient(135deg, #8B4049 0%, #A85860 100%);
+  color: var(--bg-white);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  box-shadow: 0 4px 15px rgba(139, 64, 73, 0.4);
+  z-index: 999;
+  transition: var(--transition);
+  cursor: pointer;
+  border: none;
+  animation: pulse 2s infinite;
+}
+
+.chat-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(139, 64, 73, 0.6);
+  background: linear-gradient(135deg, #6E2F36 0%, #8B4049 100%);
 }
 
 /* WhatsApp Floating Button */
@@ -1083,13 +1209,36 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
-  align-items: center;
+  align-items: stretch;
   background: transparent;
   padding: 0;
   margin: 0;
   opacity: 0;
   transition: none;
+  position: relative;
+  min-height: 600px;
 }
+
+.service-category-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.service-category-card:nth-child(odd)::before {
+  background: rgba(250, 248, 245, 0.5);
+}
+
+.service-category-card:nth-child(even)::before {
+  background: rgba(255, 255, 255, 0.5);
+}
+
 
 .service-category-card[data-animate="fade-right"] .service-category-image {
   order: 2;
@@ -1102,15 +1251,19 @@ footer {
 .service-category-image {
   position: relative;
   width: 100%;
-  height: auto;
-  overflow: visible;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: stretch;
 }
 
 .service-category-image img {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
   transition: none;
+  object-fit: cover;
+  object-position: center bottom;
 }
 
 .service-category-card:hover .service-category-image img {
@@ -1121,6 +1274,9 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 25px;
+  justify-content: center;
+  align-self: center;
+  padding: 60px 40px;
 }
 
 .service-category-content h3 {
@@ -1448,8 +1604,11 @@ footer {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>');
-  opacity: 0.3;
+  background-image: 
+    radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.08) 0%, transparent 50%),
+    url('data:image/svg+xml,%3Csvg width="60" height="60" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M30 0 L30 60 M0 30 L60 30" stroke="rgba(255,255,255,0.05)" stroke-width="1"/%3E%3C/svg%3E');
+  opacity: 0.5;
 }
 
 .procedure-hero-overlay {
@@ -1498,43 +1657,92 @@ footer {
   background: var(--bg-white);
 }
 
-/* Quick Info Bar */
+/* Quick Info Bar - Luxury Design */
 .procedure-quick-info {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
+  gap: 2px;
   margin-bottom: 60px;
-  padding: 30px;
-  background: var(--bg-light);
-  border-radius: 12px;
-  border: 1px solid var(--border-color);
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
+  border: none;
+  overflow: hidden;
 }
 
 .quick-info-item {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 15px;
+  justify-content: center;
+  gap: 12px;
+  padding: 35px 20px;
+  background: linear-gradient(135deg, rgba(196, 154, 108, 0.08) 0%, rgba(212, 175, 135, 0.05) 100%);
+  border-right: 1px solid rgba(196, 154, 108, 0.15);
+  transition: all 0.3s ease;
+  position: relative;
+  text-align: center;
+  min-height: 160px;
+}
+
+.quick-info-item:last-child {
+  border-right: none;
+}
+
+.quick-info-item:hover {
+  background: linear-gradient(135deg, rgba(196, 154, 108, 0.12) 0%, rgba(212, 175, 135, 0.08) 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(196, 154, 108, 0.15);
+}
+
+.quick-info-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.quick-info-item:hover::before {
+  opacity: 1;
 }
 
 .info-icon {
-  font-size: 32px;
+  font-size: 42px;
   flex-shrink: 0;
+  filter: grayscale(0.2);
+  opacity: 0.85;
+  transition: all 0.3s ease;
+}
+
+.quick-info-item:hover .info-icon {
+  transform: scale(1.1);
+  opacity: 1;
+  filter: grayscale(0);
 }
 
 .quick-info-item strong {
   display: block;
-  font-size: 14px;
-  color: var(--text-light);
-  margin-bottom: 4px;
+  font-size: 11px;
+  color: var(--primary-color);
+  margin-bottom: 6px;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  font-family: var(--font-body);
 }
 
 .quick-info-item p {
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 600;
   color: var(--text-dark);
   margin: 0;
+  font-family: var(--font-heading);
+  line-height: 1.4;
 }
 
 /* Procedure Sections */
@@ -1549,6 +1757,60 @@ footer {
   border-radius: 12px;
   margin-left: -40px;
   margin-right: -40px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background patterns for different section types */
+.procedure-section.section-alt::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(196, 154, 108, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 90% 80%, rgba(196, 154, 108, 0.05) 0%, transparent 50%),
+    url('data:image/svg+xml,%3Csvg width="100" height="100" xmlns="http://www.w3.org/2000/svg"%3E%3Ccircle cx="50" cy="50" r="1.5" fill="rgba(196,154,108,0.08)"/%3E%3C/svg%3E');
+  opacity: 0.6;
+  z-index: 0;
+}
+
+.procedure-section.section-alt > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Specific background for "How It Works" sections */
+.procedure-section.section-alt:has(h2:first-of-type:contains("How It Works")),
+.procedure-section.section-alt h2:first-of-type {
+  position: relative;
+}
+
+.procedure-section.section-alt .process-steps {
+  position: relative;
+  z-index: 1;
+}
+
+/* Ideal Candidates section - distinctive background */
+.procedure-section.section-alt:has(.candidates-grid)::before {
+  background-image: 
+    linear-gradient(135deg, rgba(196, 154, 108, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 15% 25%, rgba(139, 115, 85, 0.05) 0%, transparent 40%),
+    radial-gradient(circle at 85% 75%, rgba(212, 175, 135, 0.05) 0%, transparent 40%),
+    url('data:image/svg+xml,%3Csvg width="80" height="80" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M0 40 Q20 20 40 40 T80 40" stroke="rgba(196,154,108,0.06)" fill="none" stroke-width="1"/%3E%3C/svg%3E');
+}
+
+/* Complementary Treatments section - inviting background */
+.procedure-section.section-alt:has(.complementary-grid)::before {
+  background-image: 
+    radial-gradient(ellipse at 20% 30%, rgba(196, 154, 108, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 70%, rgba(212, 175, 135, 0.08) 0%, transparent 50%),
+    linear-gradient(45deg, rgba(196, 154, 108, 0.02) 25%, transparent 25%, transparent 75%, rgba(196, 154, 108, 0.02) 75%, rgba(196, 154, 108, 0.02)),
+    linear-gradient(45deg, rgba(196, 154, 108, 0.02) 25%, transparent 25%, transparent 75%, rgba(196, 154, 108, 0.02) 75%, rgba(196, 154, 108, 0.02));
+  background-size: 100% 100%, 100% 100%, 60px 60px, 60px 60px;
+  background-position: 0 0, 0 0, 0 0, 30px 30px;
 }
 
 .procedure-section h2 {
@@ -1944,24 +2206,27 @@ footer {
 
 /* Procedure CTA Section */
 .procedure-cta {
-  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), 
+              url('../images/ready to design your silhouette.jpeg') center/cover no-repeat;
   padding: 60px 40px;
   border-radius: 12px;
   text-align: center;
   margin: 60px 0;
-  color: white;
+  color: var(--text-dark);
+  position: relative;
+  overflow: hidden;
 }
 
 .cta-content h2 {
   font-size: 42px;
-  color: white;
+  color: var(--text-dark);
   margin-bottom: 20px;
   border: none;
 }
 
 .cta-content p {
   font-size: 18px;
-  color: rgba(255, 255, 255, 0.95);
+  color: var(--text-light);
   max-width: 700px;
   margin: 0 auto 40px;
 }
@@ -1981,27 +2246,27 @@ footer {
 }
 
 .btn-secondary {
-  background: white;
-  color: var(--primary-color);
-  border: 2px solid white;
+  background: var(--primary-color);
+  color: white;
+  border: 2px solid var(--primary-color);
 }
 
 .btn-secondary:hover {
   background: transparent;
-  color: white;
-  border-color: white;
+  color: var(--primary-color);
+  border-color: var(--primary-color);
 }
 
 .cta-contact-info p {
-  color: rgba(255, 255, 255, 0.95);
+  color: var(--text-light);
   margin: 8px 0;
 }
 
 .cta-contact-info a {
-  color: white;
+  color: var(--primary-color);
   text-decoration: none;
   font-weight: 600;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid var(--primary-color);
 }
 
 .hours {
@@ -3279,3 +3544,533 @@ footer {
   }
 }
 
+/* ============================================
+   SCROLL-TRIGGERED FADE-IN ANIMATIONS
+   ============================================ */
+
+/* Base state - elements are hidden initially */
+.fade-in-element {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Visible state - triggered when element enters viewport */
+.fade-in-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered delays for multiple elements */
+.fade-in-element:nth-child(1) { transition-delay: 0.1s; }
+.fade-in-element:nth-child(2) { transition-delay: 0.2s; }
+.fade-in-element:nth-child(3) { transition-delay: 0.3s; }
+.fade-in-element:nth-child(4) { transition-delay: 0.4s; }
+.fade-in-element:nth-child(5) { transition-delay: 0.5s; }
+.fade-in-element:nth-child(6) { transition-delay: 0.6s; }
+.fade-in-element:nth-child(7) { transition-delay: 0.7s; }
+.fade-in-element:nth-child(8) { transition-delay: 0.8s; }
+
+/* Faster animation for smaller elements */
+.fade-in-fast {
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* Slower animation for larger sections */
+.fade-in-slow {
+  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+}
+
+/* Slide from left variant */
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-left.fade-in-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Slide from right variant */
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-right.fade-in-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ============================================
+   PAGE-SPECIFIC HERO BACKGROUNDS
+   ============================================ */
+
+/* Liposuction procedure hero with surgical background */
+body.liposuction-page .procedure-hero {
+  background: linear-gradient(135deg, rgba(44, 44, 44, 0.75) 0%, rgba(139, 115, 85, 0.65) 100%),
+              url('../images/backgrounds/liposuction-hero.jpeg');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  min-height: 600px;
+  width: 100%;
+  position: relative;
+}
+
+body.liposuction-page .procedure-hero::before {
+  background: none;
+}
+
+/* Enhance text readability on photo background */
+body.liposuction-page .procedure-hero h1 {
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+  font-size: 64px;
+  color: white;
+}
+
+body.liposuction-page .hero-subtitle {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  font-size: 22px;
+  color: rgba(255, 255, 255, 0.98);
+}
+
+/* Disable parallax on mobile for better performance */
+@media (max-width: 768px) {
+  body.liposuction-page .procedure-hero {
+    background-attachment: scroll;
+    min-height: 400px;
+  }
+  
+  body.liposuction-page .procedure-hero h1 {
+    font-size: 42px;
+  }
+  
+  body.liposuction-page .hero-subtitle {
+    font-size: 18px;
+  }
+}
+
+/* How It Works section background for liposuction pages */
+body.liposuction-page section#how-it-works.procedure-section.section-alt {
+  background-color: transparent !important;
+  background-image: linear-gradient(rgba(250, 248, 245, 0.4), rgba(250, 248, 245, 0.4)),
+                    url('../images/backgrounds/Liposuction-whattoexpect.jpeg') !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-attachment: fixed !important;
+  background-repeat: no-repeat !important;
+  position: relative !important;
+  overflow: hidden !important;
+  min-height: 700px !important;
+}
+
+body.liposuction-page section#how-it-works.procedure-section.section-alt::before {
+  content: none !important;
+  display: none !important;
+  opacity: 0 !important;
+}
+
+/* Ensure content is readable on the background */
+body.liposuction-page #how-it-works h2 {
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.8);
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+/* Make process step cards transparent to show background */
+body.liposuction-page #how-it-works .process-step {
+  background: rgba(255, 255, 255, 0.5) !important;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+body.liposuction-page #how-it-works .info-box {
+  background: rgba(232, 244, 248, 0.6) !important;
+  backdrop-filter: blur(8px);
+}
+
+/* Mobile optimization for How It Works section */
+@media (max-width: 768px) {
+  body.liposuction-page #how-it-works {
+    background-attachment: scroll;
+  }
+}
+
+/* Ideal Candidates section background for liposuction pages */
+body.liposuction-page section#ideal-candidates.procedure-section.section-alt {
+  background-color: transparent !important;
+  background-image: linear-gradient(rgba(250, 248, 245, 0.4), rgba(250, 248, 245, 0.4)),
+                    url('../images/backgrounds/liposuction-idealcandidate.jpeg') !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-attachment: fixed !important;
+  background-repeat: no-repeat !important;
+  position: relative !important;
+  overflow: hidden !important;
+  min-height: 700px !important;
+}
+
+body.liposuction-page section#ideal-candidates.procedure-section.section-alt::before {
+  content: none !important;
+  display: none !important;
+  opacity: 0 !important;
+}
+
+/* Ensure content is readable on the background */
+body.liposuction-page #ideal-candidates h2 {
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.8);
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+/* Make candidate boxes more transparent to show background */
+body.liposuction-page #ideal-candidates .candidate-box {
+  background: rgba(255, 255, 255, 0.5) !important;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
+  border: 2px solid rgba(196, 154, 108, 0.4) !important;
+}
+
+body.liposuction-page #ideal-candidates .warning-box {
+  background: rgba(255, 244, 230, 0.6) !important;
+  backdrop-filter: blur(8px);
+}
+
+/* Mobile optimization for Ideal Candidates section */
+@media (max-width: 768px) {
+  body.liposuction-page #ideal-candidates {
+    background-attachment: scroll;
+    min-height: 500px !important;
+  }
+}
+
+
+/* Virtual Consultation Modal */
+.virtual-consult-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+  z-index: 10000;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.virtual-consult-modal-content {
+  background: var(--bg-white);
+  border-radius: 12px;
+  padding: 40px;
+  max-width: 800px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
+  animation: modalSlideIn 0.3s ease;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.virtual-consult-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 36px;
+  color: var(--text-light);
+  cursor: pointer;
+  line-height: 1;
+  transition: var(--transition);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.virtual-consult-close:hover {
+  color: var(--primary-color);
+  background: var(--bg-light);
+}
+
+.virtual-consult-modal-content h2 {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  margin-bottom: 15px;
+  color: var(--text-dark);
+}
+
+.virtual-consult-modal-content p {
+  color: var(--text-light);
+  font-size: 16px;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.virtual-consult-iframe-container {
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background: #f5f5f5;
+  position: relative;
+}
+
+.virtual-consult-iframe-container::before {
+  content: 'Loading Virtual Assistant...';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #666;
+  z-index: 1;
+}
+
+.virtual-consult-iframe-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  position: relative;
+  z-index: 2;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .virtual-consult-modal-content {
+    padding: 30px 20px;
+    max-height: 95vh;
+  }
+
+  .virtual-consult-modal-content h2 {
+    font-size: 24px;
+  }
+
+  .virtual-consult-iframe-container {
+    height: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .virtual-consult-modal-content {
+    padding: 25px 15px;
+  }
+
+  .virtual-consult-iframe-container {
+    height: 350px;
+  }
+}
+
+/* Booking Modal */
+.booking-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+  z-index: 10000;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.booking-modal-content {
+  background: var(--bg-white);
+  border-radius: 12px;
+  padding: 40px;
+  max-width: 600px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
+  animation: modalSlideIn 0.3s ease;
+}
+
+.booking-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 36px;
+  color: var(--text-light);
+  cursor: pointer;
+  line-height: 1;
+  transition: var(--transition);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.booking-close:hover {
+  color: var(--primary-color);
+  background: var(--bg-light);
+}
+
+.booking-modal-content h2 {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: var(--text-dark);
+}
+
+.booking-modal-content > p {
+  color: var(--text-light);
+  font-size: 16px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text-dark);
+  letter-spacing: 0.3px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 12px 15px;
+  border: 2px solid var(--border-color);
+  border-radius: 6px;
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--text-dark);
+  transition: var(--transition);
+  background: var(--bg-white);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(196, 154, 108, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.btn-submit {
+  margin-top: 10px;
+  padding: 16px 32px;
+  font-size: 16px;
+  width: 100%;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-submit:hover {
+  transform: translateY(-2px);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .booking-modal-content {
+    padding: 30px 20px;
+    max-height: 95vh;
+  }
+
+  .booking-modal-content h2 {
+    font-size: 24px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .booking-modal-content {
+    padding: 25px 15px;
+  }
+}
+
+/* WhatsApp Button Styling */
+.btn-whatsapp {
+  background: #25D366 !important;
+  color: white !important;
+  border: 2px solid #25D366 !important;
+  padding: 10px 14px !important;
+  min-width: auto !important;
+  font-size: 18px !important;
+}
+
+.btn-whatsapp:hover {
+  background: #128C7E !important;
+  border-color: #128C7E !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4) !important;
+}
+
+/* Make all WhatsApp buttons green */
+.btn-secondary[href*="wa.me"],
+a[href*="wa.me"].btn {
+  background: #25D366 !important;
+  color: white !important;
+  border: 2px solid #25D366 !important;
+}
+
+.btn-secondary[href*="wa.me"]:hover,
+a[href*="wa.me"].btn:hover {
+  background: #128C7E !important;
+  border-color: #128C7E !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4) !important;
+}

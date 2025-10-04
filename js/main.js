@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initServiceCardAnimations();
     initServiceCategoryAnimations();
     initProcedureTooltips();
+    initScrollFadeIn();
 });
 
 // ============================================
@@ -707,6 +708,40 @@ function initProcedureTooltips() {
         tooltip.style.top = top + 'px';
         tooltip.style.left = left + 'px';
     }
+}
+
+// ============================================
+// SCROLL-TRIGGERED FADE-IN ANIMATIONS
+// ============================================
+
+function initScrollFadeIn() {
+    // Select all elements that should fade in on scroll
+    const fadeElements = document.querySelectorAll('.fade-in-element, .fade-in-left, .fade-in-right');
+    
+    if (fadeElements.length === 0) return;
+
+    // Create Intersection Observer
+    const observerOptions = {
+        root: null, // viewport
+        rootMargin: '0px 0px -100px 0px', // trigger slightly before element fully enters viewport
+        threshold: 0.1 // trigger when 10% of element is visible
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            // When element enters viewport
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in-visible');
+                // Optional: stop observing once animated to improve performance
+                // observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Observe all fade-in elements
+    fadeElements.forEach(element => {
+        observer.observe(element);
+    });
 }
 
 // ============================================
