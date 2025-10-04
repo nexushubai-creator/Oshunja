@@ -74,7 +74,7 @@ nav {
   font-family: var(--font-heading);
   font-size: 30px;
   font-weight: 600;
-  color: var(--primary-color);
+  color: #000000;
   letter-spacing: 2px;
   text-transform: uppercase;
   flex-shrink: 0;
@@ -4401,7 +4401,7 @@ a[href*="wa.me"].btn:hover {
 .step-box .step-number {
     font-size: 36px;
     font-weight: bold;
-    color: var(--primary-color);
+    color: #000000;
     margin-bottom: 10px;
     display: block;
 }
