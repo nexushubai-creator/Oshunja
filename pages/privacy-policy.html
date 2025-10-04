@@ -8,112 +8,103 @@
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    <header id="header">
-        <div class="container">
-            <nav>
-                                <a href="../index.html" class="logo" aria-label="OSHUNJA Home">OSHUN<span style="color: var(--secondary-color);">JA</span></a>
-                <ul class="nav-links" id="navLinks">
-                    <li><a href="../index.html" aria-label="Home">Home</a></li>
+    <!-- NAVIGATION TEMPLATE - Use this on all pages -->
+<header id="header">
+    <div class="container">
+        <nav>
+            <a href="../index.html" class="logo" aria-label="OSHUNJA Home">OSHUN<span style="color: var(--secondary-color);">JA</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html" aria-label="Home">Home</a></li>
+                <li class="dropdown mega-menu-dropdown">
+                    <span class="nav-category">Procedures <span class="menu-icon">☰</span></span>
+                    <div class="mega-menu">
+                        <div class="mega-menu-content">
+                            <div class="mega-menu-column">
+                                <h4>Facial Procedures</h4>
+                                <ul>
+                                    <li><a href="../procedures/facial/botox.html">Botox</a></li>
+                                    <li><a href="../procedures/facial/juvederm.html">Juvederm</a></li>
+                                    <li><a href="../procedures/facial/prp-facial.html">PRP Facial</a></li>
+                                    <li><a href="../procedures/facial/microneedling.html">Microneedling</a></li>
+                                </ul>
+                                <h4>Hair & Scalp</h4>
+                                <ul>
+                                    <li><a href="../procedures/hair/laser-hair-removal.html">Laser Hair Removal</a></li>
+                                    <li><a href="../procedures/hair/prp-hair-restoration.html">Hair Restoration (PRP)</a></li>
+                                </ul>
+                                <h4>Body Procedures</h4>
+                                <ul>
+                                    <li><a href="../procedures/body/prp-breast-lift.html">PRP Breast Lift</a></li>
+                                    <li><a href="../procedures/body/liposuction-360-180.html">Liposuction 360/180</a></li>
+                                    <li><a href="../procedures/body/renuvion.html">Renuvion Skin Tightening</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-menu-column">
+                                <h4>Pelvic & Intimate</h4>
+                                <ul>
+                                    <li><a href="../procedures/pelvic-intimate/labiaplasty.html">Labiaplasty</a></li>
+                                    <li><a href="../procedures/pelvic-intimate/clitoral-hood-reduction.html">Clitoral Hood Reduction</a></li>
+                                    <li><a href="../procedures/pelvic-intimate/perineoplasty.html">Perineoplasty</a></li>
+                                    <li><a href="../procedures/pelvic-intimate/hymenoplasty.html">Hymenoplasty</a></li>
+                                    <li><a href="../procedures/pelvic-intimate/vaginoplasty.html">Vaginoplasty</a></li>
+                                    <li><a href="../procedures/pelvic-intimate/anal-skin-removal.html">Anal Skin Removal</a></li>
+                                    <li><a href="../procedures/pelvic-intimate/labial-puff.html">Labial Puff</a></li>
+                                </ul>
+                                <h4>Pelvic & Reproductive</h4>
+                                <ul>
+                                    <li><a href="../procedures/pelvic-reproductive/annual-exam.html">Annual Exam</a></li>
+                                    <li><a href="../procedures/pelvic-reproductive/endometrial-ablation.html">Endometrial Ablation</a></li>
+                                    <li><a href="../procedures/pelvic-reproductive/hysteroscopy.html">Hysteroscopy</a></li>
+                                    <li><a href="../procedures/pelvic-reproductive/laparoscopy.html">Laparoscopy</a></li>
+                                    <li><a href="../procedures/pelvic-reproductive/myomectomy.html">Myomectomy</a></li>
+                                    <li><a href="../procedures/pelvic-reproductive/hysterectomy.html">Hysterectomy</a></li>
+                                    <li><a href="../procedures/pelvic-reproductive/thinprep-pap.html">ThinPrep Pap</a></li>
+                                    <li><a href="../procedures/pelvic-reproductive/colposcopy.html">Colposcopy</a></li>
+                                    <li><a href="../procedures/pelvic-intimate/vulvar-vaginal-cysts-warts.html">Vulvar/Vaginal Cysts & Warts</a></li>
+                                    <li><a href="../procedures/pelvic-intimate/lichen-sclerosus-treatment.html">Lichen Sclerosus Treatment</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-menu-column">
+                                <h4>Sexual Health</h4>
+                                <ul>
+                                    <li><a href="../procedures/sexual-health/o-shot.html">O-Shot</a></li>
+                                    <li><a href="../procedures/sexual-health/clit-shot.html">Clit Shot</a></li>
+                                    <li><a href="../procedures/sexual-health/p-shot.html">P-Shot</a></li>
+                                    <li><a href="../procedures/sexual-health/shockwave-therapy.html">Shockwave Therapy</a></li>
+                                    <li><a href="../procedures/sexual-health/bioidentical-hormones-women.html">Bioidentical Hormones (Women)</a></li>
+                                    <li><a href="../procedures/sexual-health/bioidentical-hormones-men.html">Bioidentical Hormones (Men)</a></li>
+                                    <li><a href="../procedures/sexual-health/menopause-management.html">Menopause Management</a></li>
+                                    <li><a href="../procedures/sexual-health/testosterone-optimization.html">Testosterone Optimization</a></li>
+                                    <li><a href="../procedures/sexual-health/emsella-chair.html">Emsella Chair</a></li>
+                                </ul>
+                                <h4>Wellness</h4>
+                                <ul>
+                                    <li><a href="../procedures/wellness/ozempic.html">Ozempic</a></li>
+                                    <li><a href="../procedures/wellness/mounjaro.html">Mounjaro</a></li>
+                                    <li><a href="../procedures/wellness/dietetics.html">Dietetics</a></li>
+                                    <li><a href="../procedures/wellness/metabolic-health-testing.html">Metabolic Health Testing</a></li>
+                                    <li><a href="../procedures/wellness/iv-therapy.html">IV Therapy</a></li>
+                                    <li><a href="../procedures/wellness/wellness-coaching.html">Wellness Coaching</a></li>
+                                    <li><a href="../procedures/wellness/sauna.html">Sauna</a></li>
+                                    <li><a href="../procedures/wellness/cold-plunge.html">Cold Plunge</a></li>
+                                    <li><a href="../procedures/wellness/salt-blocks.html">Salt Blocks</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-divider"></li>
+                <li><a href="https://wa.me/18764422327" class="btn btn-elegant btn-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Connect via WhatsApp"><span class="btn-icon">💬</span> WhatsApp</a></li>
+                <li><a href="#" class="btn btn-elegant btn-virtual virtual-consult-trigger" aria-label="Start Virtual Consultation"><span class="btn-icon">📹</span> Virtual Consultation</a></li>
+                <li><a href="contact.html" class="btn btn-elegant btn-book" aria-label="Book Private Consultation"><span class="btn-icon">📅</span> Book Consultation</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle mobile menu" aria-expanded="false">
+                ☰
+            </button>
+        </nav>
+    </div>
+</header>
 
-                    <li class="dropdown">
-                        <span class="nav-category">Facial Procedures</span>
-                        <ul class="dropdown-menu">
-                            <li><a href="../pages/procedures/facial/botox.html">Botox</a></li>
-                            <li><a href="../pages/procedures/facial/juvederm.html">Juvederm</a></li>
-                            <li><a href="../pages/procedures/facial/prp-facial.html">PRP Facial</a></li>
-                            <li><a href="../pages/procedures/facial/microneedling.html">Microneedling</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="dropdown">
-                        <span class="nav-category">Hair & Scalp</span>
-                        <ul class="dropdown-menu">
-                            <li><a href="../pages/procedures/hair/laser-hair-removal.html">Laser Hair Removal</a></li>
-                            <li><a href="../pages/procedures/hair/prp-hair-restoration.html">Hair Restoration (PRP)</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="dropdown">
-                        <span class="nav-category">Body Procedures</span>
-                        <ul class="dropdown-menu">
-                            <li><a href="../pages/procedures/body/prp-breast-lift.html">PRP Breast Lift</a></li>
-                            <li><a href="../pages/procedures/body/liposuction-360-180.html">Liposuction 360/180</a></li>
-                            <li><a href="../pages/procedures/body/renuvion.html">Renuvion - Abdomen</a></li>
-                            <li><a href="../pages/procedures/body/renuvion.html">Renuvion - Back</a></li>
-                            <li><a href="../pages/procedures/body/renuvion.html">Renuvion - Neck</a></li>
-                            <li><a href="../pages/procedures/body/renuvion.html">Renuvion - Arms</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="dropdown">
-                        <span class="nav-category">Pelvic & Intimate</span>
-                        <ul class="dropdown-menu">
-                            <li><a href="../pages/procedures/pelvic-intimate/labiaplasty.html">Labiaplasty</a></li>
-                            <li><a href="../pages/procedures/pelvic-intimate/clitoral-hood-reduction.html">Clitoral Hood Reduction</a></li>
-                            <li><a href="../pages/procedures/pelvic-intimate/perineoplasty.html">Perineoplasty</a></li>
-                            <li><a href="../pages/procedures/pelvic-intimate/hymenoplasty.html">Hymenoplasty</a></li>
-                            <li><a href="../pages/procedures/pelvic-intimate/vaginoplasty.html">Vaginoplasty</a></li>
-                            <li><a href="../pages/procedures/pelvic-intimate/anal-skin-removal.html">Anal Skin Removal</a></li>
-                            <li><a href="../pages/procedures/pelvic-intimate/labial-puff.html">Labial Puff</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="dropdown">
-                        <span class="nav-category">Pelvic & Reproductive</span>
-                        <ul class="dropdown-menu">
-                            <li><a href="../pages/procedures/pelvic-reproductive/annual-exam.html">Annual Exam</a></li>
-                            <li><a href="../pages/procedures/pelvic-reproductive/endometrial-ablation.html">Endometrial Ablation</a></li>
-                            <li><a href="../pages/procedures/pelvic-reproductive/hysteroscopy.html">Hysteroscopy</a></li>
-                            <li><a href="../pages/procedures/pelvic-reproductive/laparoscopy.html">Laparoscopy</a></li>
-                            <li><a href="../pages/procedures/pelvic-reproductive/myomectomy.html">Myomectomy</a></li>
-                            <li><a href="../pages/procedures/pelvic-reproductive/hysterectomy.html">Hysterectomy</a></li>
-                            <li><a href="../pages/procedures/pelvic-reproductive/thinprep-pap.html">ThinPrep Pap</a></li>
-                            <li><a href="../pages/procedures/pelvic-reproductive/colposcopy.html">Colposcopy</a></li>
-                            <li><a href="../pages/procedures/pelvic-intimate/vulvar-vaginal-cysts-warts.html">Vulvar/Vaginal Cysts & Warts</a></li>
-                            <li><a href="../pages/procedures/pelvic-intimate/lichen-sclerosus-treatment.html">Lichen Sclerosus Treatment</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="dropdown">
-                        <span class="nav-category">Sexual Health</span>
-                        <ul class="dropdown-menu">
-                            <li><a href="../pages/procedures/sexual-health/o-shot.html">O-Shot</a></li>
-                            <li><a href="../pages/procedures/sexual-health/clit-shot.html">Clit Shot</a></li>
-                            <li><a href="../pages/procedures/sexual-health/p-shot.html">P-Shot</a></li>
-                            <li><a href="../pages/procedures/sexual-health/shockwave-therapy.html">Shockwave Therapy</a></li>
-                            <li><a href="../pages/procedures/sexual-health/bioidentical-hormones-women.html">Bioidentical Hormones (Women)</a></li>
-                            <li><a href="../pages/procedures/sexual-health/bioidentical-hormones-men.html">Bioidentical Hormones (Men)</a></li>
-                            <li><a href="../pages/procedures/sexual-health/menopause-management.html">Menopause Management</a></li>
-                            <li><a href="../pages/procedures/sexual-health/testosterone-optimization.html">Testosterone Optimization</a></li>
-                            <li><a href="../pages/procedures/sexual-health/emsella-chair.html">Emsella Chair</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="dropdown">
-                        <span class="nav-category">Wellness</span>
-                        <ul class="dropdown-menu">
-                            <li><a href="../pages/procedures/wellness/ozempic.html">Ozempic</a></li>
-                            <li><a href="../pages/procedures/wellness/mounjaro.html">Mounjaro</a></li>
-                            <li><a href="../pages/procedures/wellness/dietetics.html">Dietetics</a></li>
-                            <li><a href="../pages/procedures/wellness/metabolic-health-testing.html">Metabolic Health Testing</a></li>
-                            <li><a href="../pages/procedures/wellness/iv-therapy.html">IV Therapy</a></li>
-                            <li><a href="../pages/procedures/wellness/wellness-coaching.html">Wellness Coaching</a></li>
-                            <li><a href="../pages/procedures/wellness/sauna.html">Sauna</a></li>
-                            <li><a href="../pages/procedures/wellness/cold-plunge.html">Cold Plunge</a></li>
-                            <li><a href="../pages/procedures/wellness/salt-blocks.html">Salt Blocks</a></li>
-                        </ul>
-                    </li>
-
-                    <li><a href="https://wa.me/18764422327" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">💬</a></li>
-                    <li><a href="#" class="btn btn-virtual-consult virtual-consult-trigger" aria-label="Virtual Consultation">Virtual Consultation</a></li>
-                    <li><a href="../pages/contact.html" class="btn btn-primary" aria-label="Book Consultation">Book Consultation</a></li>
-                </ul>
-                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle mobile menu" aria-expanded="false">
-                    ☰
-                </button>
-            </nav>
-        </div>
-    </header>
 
     <main class="procedure-detail">
         <div class="container">
@@ -242,3 +233,4 @@
 
 </body>
 </html>
+
