@@ -4403,7 +4403,14 @@ a[href*="wa.me"].btn:hover {
     font-weight: bold;
     color: #000000;
     margin-bottom: 10px;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border: 3px solid #000000;
+    border-radius: 50%;
+    margin: 0 auto 15px;
 }
 
 .step-box h3 {
