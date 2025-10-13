@@ -1,0 +1,340 @@
+{
+  "title": "AI Business Suite HQ",
+  "description": "Live testing environment for the AI Business Suite ecosystem.",
+  "children": [
+    {
+      "title": "Business Head AI (Control Center)",
+      "type": "folder",
+      "children": [
+        {
+          "title": "Weekly KPI Summary Generator",
+          "type": "task",
+          "checked": false,
+          "children": []
+        },
+        {
+          "title": "Next Action Recommender",
+          "type": "task",
+          "checked": false,
+          "children": []
+        },
+        {
+          "title": "Business Health Score",
+          "type": "task",
+          "checked": false,
+          "children": []
+        },
+        {
+          "title": "Alert System",
+          "type": "task",
+          "checked": false,
+          "children": [
+            {
+              "title": "Configure department indicators (red / yellow / green)",
+              "type": "task",
+              "checked": false
+            }
+          ]
+        },
+        {
+          "title": "Mission Briefing Reports",
+          "type": "task",
+          "checked": false,
+          "children": []
+        }
+      ],
+      "automations": [
+        "Auto-fetch updates from all operational folders weekly",
+        "Generate executive summary and post to dashboard",
+        "Notify owner via WhatsApp / email"
+      ]
+    },
+    {
+      "title": "Core Operations",
+      "type": "folder",
+      "children": [
+        {
+          "title": "Sales & Marketing",
+          "type": "folder",
+          "children": [
+            {
+              "title": "Sales Bot Tasks",
+              "type": "folder",
+              "children": [
+                { "title": "Outbound calls to leads (Twilio)", "type": "task", "checked": false },
+                { "title": "Follow-up automation scripts", "type": "task", "checked": false },
+                { "title": "Lead scoring logic (hot / warm / cold)", "type": "task", "checked": false }
+              ]
+            },
+            {
+              "title": "Marketing Bot Tasks",
+              "type": "folder",
+              "children": [
+                { "title": "Ad campaign generator (content + budget)", "type": "task", "checked": false },
+                { "title": "Weekly engagement analysis (CTR, CPC)", "type": "task", "checked": false },
+                { "title": "Content testing & A/B optimization", "type": "task", "checked": false }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Customer Experience",
+          "type": "folder",
+          "children": [
+            {
+              "title": "Receptionist Bot",
+              "type": "folder",
+              "children": [
+                { "title": "Call routing tree & voice response setup", "type": "task", "checked": false },
+                { "title": "Appointment scheduler integration (Google Calendar / GoHighLevel)", "type": "task", "checked": false }
+              ]
+            },
+            {
+              "title": "Customer Service Bot",
+              "type": "folder",
+              "children": [
+                { "title": "WhatsApp, Social & Email intake", "type": "task", "checked": false },
+                { "title": "Automated FAQ handling", "type": "task", "checked": false },
+                { "title": "Escalation flow for human support", "type": "task", "checked": false }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Finance & HR",
+          "type": "folder",
+          "children": [
+            {
+              "title": "Finance Bot",
+              "type": "folder",
+              "children": [
+                { "title": "Expense tracking, invoicing & payment logging", "type": "task", "checked": false },
+                { "title": "Cash flow forecasting simulation", "type": "task", "checked": false }
+              ]
+            },
+            {
+              "title": "HR Bot",
+              "type": "folder",
+              "children": [
+                { "title": "Onboarding flow", "type": "task", "checked": false },
+                { "title": "Daily attendance reporting", "type": "task", "checked": false },
+                { "title": "Employee query responder", "type": "task", "checked": false }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Support & Strategy",
+      "type": "folder",
+      "children": [
+        {
+          "title": "Operations",
+          "type": "folder",
+          "children": [
+            {
+              "title": "Inventory Bot",
+              "type": "folder",
+              "children": [
+                { "title": "Stock monitoring & reorder triggers", "type": "task", "checked": false },
+                { "title": "Vendor list management (linked with Procurement Bot)", "type": "task", "checked": false }
+              ]
+            },
+            {
+              "title": "Procurement Bot",
+              "type": "folder",
+              "children": [
+                { "title": "RFQ & purchase order generator", "type": "task", "checked": false },
+                { "title": "Vendor scorecard memory", "type": "task", "checked": false }
+              ]
+            },
+            {
+              "title": "Logistics Bot",
+              "type": "folder",
+              "children": [
+                { "title": "Delivery route optimizer (test dataset integration)", "type": "task", "checked": false },
+                { "title": "Delivery confirmation bot message", "type": "task", "checked": false }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Reputation, Partnerships & Risk",
+          "type": "folder",
+          "children": [
+            {
+              "title": "PR & Reputation Bot",
+              "type": "folder",
+              "children": [
+                { "title": "Review monitoring workflow (Google / Yelp)", "type": "task", "checked": false },
+                { "title": "Sentiment analysis tracking", "type": "task", "checked": false }
+              ]
+            },
+            {
+              "title": "Partnership Bot",
+              "type": "folder",
+              "children": [
+                { "title": "Event & contact outreach tracker", "type": "task", "checked": false },
+                { "title": "AI-drafted partnership proposals", "type": "task", "checked": false }
+              ]
+            },
+            {
+              "title": "Risk & Compliance Bot",
+              "type": "folder",
+              "children": [
+                { "title": "Risk scoring sheet", "type": "task", "checked": false },
+                { "title": "Audit log retention policy", "type": "task", "checked": false }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Sustainability & Innovation",
+          "type": "folder",
+          "children": [
+            {
+              "title": "ESG Bot",
+              "type": "folder",
+              "children": [
+                { "title": "Energy / waste input tracker", "type": "task", "checked": false },
+                { "title": "Monthly sustainability report generator", "type": "task", "checked": false }
+              ]
+            },
+            {
+              "title": "Innovation Bot",
+              "type": "folder",
+              "children": [
+                { "title": "Idea repository (tag by ROI potential)", "type": "task", "checked": false },
+                { "title": "Mini A/B pilot logs", "type": "task", "checked": false }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Memory / Data Sync",
+      "type": "folder",
+      "children": [
+        { "title": "CRM Sync Logs", "type": "task", "checked": false },
+        { "title": "Analytics Snapshots", "type": "task", "checked": false },
+        {
+          "title": "Long-Term Memory",
+          "type": "folder",
+          "children": [
+            { "title": "Lessons Learned", "type": "task", "checked": false },
+            { "title": "Strategies that worked", "type": "task", "checked": false },
+            { "title": "Failure Review Logs", "type": "task", "checked": false }
+          ]
+        }
+      ],
+      "automations": [
+        "Each bot posts summaries here daily or weekly",
+        "Business Head AI aggregates data for briefings"
+      ]
+    },
+    {
+      "title": "Testing Scenarios",
+      "type": "folder",
+      "children": [
+        {
+          "title": "Lead Conversion",
+          "type": "task",
+          "checked": false,
+          "metadata": {
+            "description": "Simulate 100 inbound leads",
+            "tools": "Sales + Marketing Bots",
+            "success_metric": "Conversion %"
+          }
+        },
+        {
+          "title": "Customer Support Stress",
+          "type": "task",
+          "checked": false,
+          "metadata": {
+            "description": "200 WhatsApp queries in 1 hour",
+            "tools": "Customer Service Bot",
+            "success_metric": "Avg. response time"
+          }
+        },
+        {
+          "title": "Multi-Channel Routing",
+          "type": "task",
+          "checked": false,
+          "metadata": {
+            "description": "10 calls, 10 WhatsApps, 5 emails",
+            "tools": "Receptionist + CRM",
+            "success_metric": "100% logged responses"
+          }
+        },
+        {
+          "title": "Cash Flow Crunch",
+          "type": "task",
+          "checked": false,
+          "metadata": {
+            "description": "Simulate 30% sales drop",
+            "tools": "Finance Bot + Business Head AI",
+            "success_metric": "Correct mitigation plan"
+          }
+        },
+        {
+          "title": "Vendor Failure",
+          "type": "task",
+          "checked": false,
+          "metadata": {
+            "description": "Random supplier delay",
+            "tools": "Procurement + Logistics Bots",
+            "success_metric": "Replacement vendor found"
+          }
+        },
+        {
+          "title": "Reputation Crisis",
+          "type": "task",
+          "checked": false,
+          "metadata": {
+            "description": "20 negative reviews spike",
+            "tools": "PR + Risk Bots",
+            "success_metric": "Sentiment recovery < 72 hrs"
+          }
+        }
+      ]
+    },
+    {
+      "title": "Future Expansion",
+      "type": "folder",
+      "children": [
+        { "title": "Machine Training Layer", "type": "task", "checked": false },
+        { "title": "Grant Writing & Funding AI", "type": "task", "checked": false },
+        { "title": "Financial Advisor AI", "type": "task", "checked": false },
+        { "title": "Regional Expansion", "type": "task", "checked": false },
+        { "title": "Credit & Microloan AI", "type": "task", "checked": false }
+      ]
+    },
+    {
+      "title": "Workflow Logic (Memory-Aware Automation)",
+      "type": "ordered_list",
+      "children": [
+        { "title": "Trigger: Event logged (new sale, message, expense)", "type": "task", "checked": false },
+        { "title": "Bot Activation: Relevant AI Bot acts", "type": "task", "checked": false },
+        { "title": "Memory Sync: Outcome stored in CRM", "type": "task", "checked": false },
+        { "title": "Analytics Aggregation: Patterns detected by Analytics Bot", "type": "task", "checked": false },
+        { "title": "Advisor Response: Business Head AI updates owner", "type": "task", "checked": false },
+        { "title": "Owner Decision / Auto Action", "type": "task", "checked": false }
+      ]
+    },
+    {
+      "title": "Launch Plan inside Taskade",
+      "type": "ordered_list",
+      "children": [
+        { "title": "Create Workspace → 'AI Business Suite HQ'", "type": "task", "checked": false },
+        { "title": "Add main folders", "type": "task", "checked": false },
+        { "title": "Assign bots as AI Agent Nodes", "type": "task", "checked": false },
+        { "title": "Connect external systems (GoHighLevel, WhatsApp, Gmail)", "type": "task", "checked": false },
+        { "title": "Schedule automatic weekly Business Head AI reports", "type": "task", "checked": false },
+        { "title": "Run testing scenarios and tune workflows", "type": "task", "checked": false },
+        { "title": "Document results in Memory folder", "type": "task", "checked": false }
+      ]
+    }
+  ]
+}
